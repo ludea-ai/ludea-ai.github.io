@@ -53,9 +53,7 @@ any asset (listen to `response` events), then push to `main` and confirm the dep
 - `nebula` — the showcase game (https://ludea.ai/nebula/); engine work is developed there, then
   synced to the template and the games.
 - `ludea-ai.github.io` — this site (the org site repo). Games: `dr-smile`, `gta7`, `my-little-stable` (https://ludea.ai/<repo>/).
-- Domain state (2026-10-11): org site repo renamed to `ludea-ai.github.io` with the custom domain
-  ludea.ai (set there ONLY, never per repo); DNS cleaned (4 GitHub A records, `www` CNAME →
-  ludea-ai.github.io). Pending on GitHub's side: the HTTPS certificate ("Enforce HTTPS" still
-  unavailable) — until it is issued, http://ludea.ai/ works but ludea.ai/<repo>/ redirects to https
-  and fails; games stay playable at https://ludea-ai.github.io/<repo>/. If it stays stuck: Settings →
-  Pages → Remove the domain, re-add `ludea.ai`, wait, then tick "Enforce HTTPS".
+- Domain state (2026-10-11): org site repo `ludea-ai.github.io` carries the custom domain ludea.ai
+  (set there ONLY, never per repo); DNS: 4 GitHub A records + `www` CNAME → ludea-ai.github.io;
+  HTTPS certificate issued — every repo is live at https://ludea.ai/<repo>/ (github.io redirects
+  there). The template's address (ludea.ai/game-engine/) only redirects to https://ludea.ai/.
