@@ -1,4 +1,4 @@
-# CLAUDE.md — ludea.ai (the Ludea brand site)
+# CLAUDE.md — ludea-ai.github.io (the Ludea brand site at ludea.ai)
 
 > Shared memory across sessions. If you pick up this project: read this, then continue.
 
@@ -52,9 +52,10 @@ any asset (listen to `response` events), then push to `main` and confirm the dep
 - `game-engine` — the GitHub template: engine layer + a small starter game. Publishes nothing.
 - `nebula` — the showcase game (https://ludea.ai/nebula/); engine work is developed there, then
   synced to the template and the games.
-- `ludea.ai` — this site. Games: `dr-smile`, `gta7`, `my-little-stable` (https://ludea.ai/<repo>/).
-- Open items for the OWNER (settings, not doable from a session): GitHub only lets the other repos
-  inherit the domain (ludea.ai/<repo>/) when the org site repo is named **`ludea-ai.github.io`** —
-  rename this repo (Settings → General) and keep the custom domain ludea.ai on it ONLY (never per
-  repo). DNS (Namecheap): delete the leftover record pointing to 162.255.119.235, add `www` CNAME →
-  ludea-ai.github.io, optionally the 4 AAAA (2606:50c0:800{0,1,2,3}::153); then "Enforce HTTPS".
+- `ludea-ai.github.io` — this site (the org site repo). Games: `dr-smile`, `gta7`, `my-little-stable` (https://ludea.ai/<repo>/).
+- Domain state (2026-10-11): org site repo renamed to `ludea-ai.github.io` with the custom domain
+  ludea.ai (set there ONLY, never per repo); DNS cleaned (4 GitHub A records, `www` CNAME →
+  ludea-ai.github.io). Pending on GitHub's side: the HTTPS certificate ("Enforce HTTPS" still
+  unavailable) — until it is issued, http://ludea.ai/ works but ludea.ai/<repo>/ redirects to https
+  and fails; games stay playable at https://ludea-ai.github.io/<repo>/. If it stays stuck: Settings →
+  Pages → Remove the domain, re-add `ludea.ai`, wait, then tick "Enforce HTTPS".
