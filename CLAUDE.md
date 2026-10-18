@@ -62,7 +62,8 @@ any asset (listen to `response` events), then push to `main` and confirm the dep
 - `game-engine` — the GitHub template: engine layer + a small starter game. Publishes nothing.
 - `nebula` — the showcase game (https://ludea.ai/nebula/); engine work is developed there, then
   synced to the template and the games.
-- `ludea-ai.github.io` — this site (the org site repo). Games: `dr-smile`, `gta7`, `my-little-stable`, `poulpy` (https://ludea.ai/<repo>/).
+- `ludea-ai.github.io` — this site (the org site repo). Ludea's games: `dr-smile`, `gta7`, `my-little-stable` (https://ludea.ai/<repo>/).
+  Poulpy now lives in its creator's repo `jlrigau/poulpy` (the first external creator; publication requested 2026-10-18, #1).
 - Ludea loop: games report engine bugs/improvements and creators' ideas as issues on `ludea-ai/game-engine`
   (skills report-upstream, ludea-feedback); Nebula's triage-upstream qualifies them, opens one PR the owner
   approves, then propagates. Publication requests land here (above). Two separate nightly agents
