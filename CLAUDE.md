@@ -37,6 +37,16 @@ When a game is added or gains a mode: update its card in `src/index.html` (tags,
 icon and QR code (add it to `tools/qr.py`), the "Install it like an app" mockup if it is a new game,
 then `node build.cjs`. Every game in the catalogue is available in English and French.
 
+### Publication requests (games made by others)
+A creator asks to join the catalogue with `/ludea-publish` in their game → a `[publish] …` issue
+here. The skill **review-submission** (`.claude/skills/review-submission/`) reviews the exact
+submitted commit — readiness, bugs and above all **child safety** (independent reviewer agent,
+`references/child-safety.md`; no request may leave the game) — and posts a verdict. **The owner
+accepts** (`/accept` comment); then the game is **forked into `ludea-ai`** at the reviewed commit,
+served at `https://ludea.ai/<slug>/`, and its card is added. `catalogue.json` = the registry of
+published games (repo served, original source, reviewed commit); the engine propagation
+(triage-upstream in Nebula) updates every game listed there.
+
 ## 4. Verify before pushing
 Serve the folder (`python3 -m http.server 8104`), screenshot `/`, `/fr/` and `/design/` at
 390×844 and at desktop width with Playwright (Chromium is installed), check there is no 404 on
@@ -52,7 +62,10 @@ any asset (listen to `response` events), then push to `main` and confirm the dep
 - `game-engine` — the GitHub template: engine layer + a small starter game. Publishes nothing.
 - `nebula` — the showcase game (https://ludea.ai/nebula/); engine work is developed there, then
   synced to the template and the games.
-- `ludea-ai.github.io` — this site (the org site repo). Games: `dr-smile`, `gta7`, `my-little-stable` (https://ludea.ai/<repo>/).
+- `ludea-ai.github.io` — this site (the org site repo). Games: `dr-smile`, `gta7`, `my-little-stable`, `poulpy` (https://ludea.ai/<repo>/).
+- Ludea loop: games report engine bugs/improvements and creators' ideas as issues on `ludea-ai/game-engine`
+  (skills report-upstream, ludea-feedback); Nebula's triage-upstream qualifies them, opens one PR the owner
+  approves, then propagates. Publication requests land here (above). A nightly scheduled task runs both.
 - Domain state (2026-10-11): org site repo `ludea-ai.github.io` carries the custom domain ludea.ai
   (set there ONLY, never per repo); DNS: 4 GitHub A records + `www` CNAME → ludea-ai.github.io;
   HTTPS certificate issued — every repo is live at https://ludea.ai/<repo>/ (github.io redirects

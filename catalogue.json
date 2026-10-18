@@ -1,0 +1,9 @@
+{
+ "_doc": "Registry of the games in the Ludea catalogue (source of truth for propagation and reviews). One entry per game: repo = the copy Ludea serves (in ludea-ai), source = the creator's original repo, reviewedCommit = the exact version that passed the review. Updated by the review-submission skill; the cards themselves live in src/index.html.",
+ "games": [
+  { "id": "nebula", "repo": "ludea-ai/nebula", "source": "ludea-ai/nebula", "url": "https://ludea.ai/nebula/", "creator": "Ludea", "minAge": 6, "showcase": true },
+  { "id": "dr-smile", "repo": "ludea-ai/dr-smile", "source": "ludea-ai/dr-smile", "url": "https://ludea.ai/dr-smile/", "creator": "Ludea", "minAge": 6 },
+  { "id": "my-little-stable", "repo": "ludea-ai/my-little-stable", "source": "ludea-ai/my-little-stable", "url": "https://ludea.ai/my-little-stable/", "creator": "Ludea", "minAge": 9 },
+  { "id": "gta7", "repo": "ludea-ai/gta7", "source": "ludea-ai/gta7", "url": "https://ludea.ai/gta7/", "creator": "Ludea", "minAge": 10 }
+ ]
+}

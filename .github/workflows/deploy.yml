@@ -32,7 +32,7 @@ jobs:
 
       # The site is the built pages at the root; sources and art tooling are not published.
       - name: Keep only the site
-        run: rm -rf src tools build.cjs design.cjs README.md CLAUDE.md
+        run: rm -rf src tools build.cjs design.cjs README.md CLAUDE.md .claude
 
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
