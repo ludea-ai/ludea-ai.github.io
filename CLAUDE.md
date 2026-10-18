@@ -38,7 +38,7 @@ icon and QR code (add it to `tools/qr.py`), the "Install it like an app" mockup 
 then `node build.cjs`. Every game in the catalogue is available in English and French.
 
 ### Publication requests (games made by others)
-A creator asks to join the catalogue with `/ludea-publish` in their game → a `[publish] …` issue
+A creator asks to join the catalogue with `/publish` in their game → a `[publish] …` issue
 here. The skill **review-submission** (`.claude/skills/review-submission/`) reviews the exact
 submitted commit — readiness, bugs and above all **child safety** (independent reviewer agent,
 `references/child-safety.md`; no request may leave the game) — and posts a verdict. **The owner
@@ -65,7 +65,7 @@ any asset (listen to `response` events), then push to `main` and confirm the dep
 - `ludea-ai.github.io` — this site (the org site repo). Ludea's games: `dr-smile`, `gta7`, `my-little-stable` (https://ludea.ai/<repo>/).
   Poulpy now lives in its creator's repo `jlrigau/poulpy` (the first external creator; publication requested 2026-10-18, #1).
 - Ludea loop: games report engine bugs/improvements and creators' ideas as issues on `ludea-ai/game-engine`
-  (skills report-upstream, ludea-feedback); Nebula's triage-upstream qualifies them, opens one PR the owner
+  (skills report-upstream, idea); Nebula's triage-upstream qualifies them, opens one PR the owner
   approves, then propagates. Publication requests land here (above). Two separate nightly agents
   (scheduled tasks): « agent moteur » 03:55 Paris (engine inbox, triage-upstream) and « agent catalogue »
   04:33 (publication requests, review-submission). Each sends the owner its own French summary and
