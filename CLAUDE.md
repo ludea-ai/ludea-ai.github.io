@@ -17,6 +17,13 @@ atmosphere** (playful, game-like, not corporate). Never use a game's art (Nebula
   `[[English||Français]]`, `{{H}}` = path to the site root. `node build.cjs` writes `index.html`
   (EN) + `fr/index.html` (FR) and runs `design.cjs` → `design/index.html`. **Never edit the
   generated pages by hand.**
+- Other pages, same system: `src/contact.html`, `src/legal.html` (legal notice), `src/privacy.html`
+  (privacy policy) → `/contact/`, `/legal/`, `/privacy/` (+ `/fr/…`); shared bits in `src/partials/`
+  (`{{> name}}`; `doc-nav`, `doc-footer`, `legal-links` = the footer links on every page). Publisher:
+  NORRECRAFT (same company and details as manufacture.dev), contact **hello@ludea.ai** (Google
+  Workspace). The privacy policy states that the site and games collect nothing (no cookie, tracker,
+  form; game saves stay on the device) — keep it true: any change that adds data collection, a
+  third-party call or a cookie must update `privacy.html` first (and is refused in kids' games).
 - `landing.css` — design tokens + styles (paper/ink + tangerine→coral brand gradient, Bricolage
   Grotesque + DM Sans self-hosted in `fonts/`).
 - `tools/art/brand.cjs` — ALL brand art as parametric SVG: `mark()` (speech bubble + play + spark),

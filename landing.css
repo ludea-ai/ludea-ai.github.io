@@ -276,3 +276,21 @@ footer .made img { width: 26px; height: 26px; }
 .tag.langs { display: inline-flex; align-items: center; gap: 5px; vertical-align: top; }
 .tag.langs img { width: 20px; height: 20px; }
 .tag.langs i { width: 1px; height: 12px; background: var(--line2); margin: 0 4px; }
+
+/* ---- document pages (contact, legal notice, privacy) ---- */
+body.doc nav .gh { margin-left: auto; }
+.doc-main { padding-top: 48px; padding-bottom: 64px; max-width: 820px; }
+.doc-main h1 { font-family: var(--display); font-size: clamp(34px, 6vw, 52px); line-height: 1.05; letter-spacing: -.03em; margin: 10px 0 6px; }
+.doc-main section { margin-top: 34px; padding: 0; background: none; }
+.doc-main h2 { font-family: var(--display); font-size: 22px; letter-spacing: -.01em; margin: 0 0 8px; }
+.doc-main p, .doc-main li { color: var(--ink); }
+.doc-main ul { padding-left: 20px; } .doc-main li { margin: 8px 0; }
+.doc-main a { color: var(--coral-d); }
+.doc-main .mail { margin-top: 26px; }
+.doc-main .mail .btn { color: #fff; }
+.doc-cards { display: grid; gap: 16px; margin-top: 34px; }
+.doc-cards section { margin: 0 !important; padding: 22px !important; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 22px; box-shadow: var(--shadow); }
+.legal-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 20px; margin: 14px 0 6px; font-size: 14px; }
+.legal-links a { color: inherit; opacity: .85; }
+.doc-foot { padding: 26px 0 34px; text-align: center; border-top: 1px solid var(--line); color: var(--muted); }
+.doc-main section p + p { margin-top: 10px; }
