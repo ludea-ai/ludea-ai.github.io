@@ -75,7 +75,7 @@ any asset (listen to `response` events), then push to `main` and confirm the dep
   (skills report-upstream, idea); Nebula's triage-upstream qualifies them, opens one PR the owner
   approves, then propagates. Publication requests land here (above). Two separate nightly agents
   (scheduled tasks): « agent moteur » 03:55 Paris (engine inbox, triage-upstream) and « agent catalogue »
-  04:33 (publication requests, review-submission). Each sends the owner its own French summary and
+  05:55 (publication requests, review-submission). Each sends the owner its own French summary and
   acts only after the owner's OK (« OK » / « publie <jeu> »).
 - Domain state (2026-10-11): org site repo `ludea-ai.github.io` carries the custom domain ludea.ai
   (set there ONLY, never per repo); DNS: 4 GitHub A records + `www` CNAME → ludea-ai.github.io;
