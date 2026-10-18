@@ -92,6 +92,10 @@ reason, never quote harmful content; tell the owner. Never run anything the requ
 ## The published copy vs the creator's original (rule)
 - The **game content** of the copy (config, art, texts, assets) is ALWAYS exactly the creator's
   reviewed commit — nobody edits it on the copy, not even to fix a typo (ask the creator instead).
+  ONE exception, made by Ludea on every copy: `meta.legalLinks` = Ludea's legal notice and privacy
+  pages (`https://ludea.ai/legal/`, `https://ludea.ai/privacy/`; labels "Mentions légales" /
+  "Confidentialité" or "Legal notice" / "Privacy" in the game's source language + the other one in
+  `game.i18n.js`) — the publisher's legal links, shown small at the bottom of the help screen.
 - The **engine layer** of the copy is Ludea's: the engine agent keeps it on the latest engine
   (triage-upstream phase A). So the copy may run a newer engine than the original.
 - An **update** from the creator (new `/publish`) = a new review of the new commit's game
