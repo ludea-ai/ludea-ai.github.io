@@ -65,7 +65,10 @@ any asset (listen to `response` events), then push to `main` and confirm the dep
 - `ludea-ai.github.io` — this site (the org site repo). Games: `dr-smile`, `gta7`, `my-little-stable`, `poulpy` (https://ludea.ai/<repo>/).
 - Ludea loop: games report engine bugs/improvements and creators' ideas as issues on `ludea-ai/game-engine`
   (skills report-upstream, ludea-feedback); Nebula's triage-upstream qualifies them, opens one PR the owner
-  approves, then propagates. Publication requests land here (above). A nightly scheduled task runs both.
+  approves, then propagates. Publication requests land here (above). Two separate nightly agents
+  (scheduled tasks): « agent moteur » 03:55 Paris (engine inbox, triage-upstream) and « agent catalogue »
+  04:33 (publication requests, review-submission). Each sends the owner its own French summary and
+  acts only after the owner's OK (« OK » / « publie <jeu> »).
 - Domain state (2026-10-11): org site repo `ludea-ai.github.io` carries the custom domain ludea.ai
   (set there ONLY, never per repo); DNS: 4 GitHub A records + `www` CNAME → ludea-ai.github.io;
   HTTPS certificate issued — every repo is live at https://ludea.ai/<repo>/ (github.io redirects
