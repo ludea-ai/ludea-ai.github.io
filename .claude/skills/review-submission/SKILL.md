@@ -80,8 +80,11 @@ repos/ludea-ai/ludea-ai.github.io/collaborators/<login>/permission`) comments `/
    contributors — every published game names its author),
    `shots/<slug>-*.webp`, `icons/<slug>.webp`, QR (`tools/qr.py`), `node build.cjs`; verify per
    CLAUDE.md §4 (screenshots `/` and `/fr/`, no 404), push, deploy green.
-4. **Contributors**: add the author (and the contributors credited on the card) under "Games in the
-   catalogue" in `ludea-ai/game-engine/CONTRIBUTORS.md` — `- **<name as credited>** ([@<login>](https://github.com/<login>)) — <game title> (<live url>)` — skip if already listed; commit + push on `game-engine` main (doc only, no engine change).
+4. **Contributors**: add a row to the "Games" table of `ludea-ai/game-engine/CONTRIBUTORS.md`:
+   `| [<game title>](<live url>) | <author as credited>[ ([@login](https://github.com/<login>))], <other contributors> |`
+   — exactly the credit the creator chose in `/publish` (a game by Ludea itself is credited "Ludea", no
+   login); skip if the game is already listed (an update changes nothing there). Commit + push on
+   `game-engine` main (doc only, no engine change).
 5. Comment on the issue (to the creator, simple and warm, in English): live link, what was
    checked, how updates work. Label `published`, close (`completed`).
 
