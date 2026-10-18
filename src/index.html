@@ -188,6 +188,39 @@ creature: {
   </div>
 </section>
 
+<section id="share">
+  <div class="wrap">
+    <div class="eyebrow"><img src="{{H}}brand/icons/gift.webp" alt="">[[Share with Ludea||Partager avec Ludea]]</div>
+    <h2>[[Your game makes the engine better — and can join the catalogue||Votre jeu améliore le moteur — et peut rejoindre le catalogue]]</h2>
+    <p class="lead">[[Each game lives in its creator's own repository. What it teaches goes back to the engine, so every game benefits — and when it is ready, you can ask for it to be published on ludea.ai, credited to you.||Chaque jeu vit dans le dépôt de son créateur. Ce qu'il apprend revient au moteur, pour que tous les jeux en profitent — et quand il est prêt, vous pouvez demander à le publier sur ludea.ai, à votre nom.]]</p>
+
+    <div class="steps">
+      <div class="step">
+        <img class="ico" src="{{H}}brand/icons/refresh.webp" alt="">
+        <h3>[[Improvements go back automatically||Les améliorations remontent toutes seules]]</h3>
+        <p>[[When your game hits an engine bug, or needs a new engine feature, the agent reports it to Ludea — with the fix when it already made one. Nothing to do on your side.||Quand votre jeu rencontre un bug du moteur, ou a besoin d'une nouvelle fonction, l'agent le signale à Ludea — avec la correction quand il l'a déjà faite. Rien à faire de votre côté.]]</p>
+      </div>
+      <div class="step">
+        <img class="ico" src="{{H}}brand/icons/sparkle.webp" alt="">
+        <h3>[[Share an idea||Proposer une idée]]</h3>
+        <p>[[An idea for the engine itself? Say it in your own words; the agent turns it into a clear request for Ludea.||Une idée pour le moteur lui-même ? Dites-la avec vos mots ; l'agent en fait une demande claire pour Ludea.]]</p>
+        <div class="say" data-who="[[You: ||Vous : ]]">/ludea-feedback</div>
+      </div>
+      <div class="step">
+        <img class="ico" src="{{H}}brand/icons/trophy.webp" alt="">
+        <h3>[[Ask to be published||Demander la publication]]</h3>
+        <p>[[The agent checks your game is ready (age, description, French + English, no errors) and safe for children (no ads, trackers, outside links or data collection), then sends the request.||L'agent vérifie que votre jeu est prêt (âge, description, français + anglais, aucune erreur) et sans danger pour les enfants (ni publicité, ni pistage, ni lien extérieur, ni collecte de données), puis envoie la demande.]]</p>
+        <div class="say" data-who="[[You: ||Vous : ]]">/ludea-publish</div>
+      </div>
+      <div class="step">
+        <img class="ico" src="{{H}}brand/icons/check.webp" alt="">
+        <h3>[[Reviewed, then online — by you||Relu, puis en ligne — à votre nom]]</h3>
+        <p>[[Ludea reviews the exact version you sent, children's safety first. Once accepted, a reviewed copy goes live at ludea.ai/&lt;your-game&gt;, with your name on its card. Your repository stays yours.||Ludea relit la version exacte envoyée, la sécurité des enfants d'abord. Une fois accepté, une copie relue est mise en ligne sur ludea.ai/&lt;votre-jeu&gt;, avec votre nom sur sa fiche. Votre dépôt reste le vôtre.]]</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ CATALOGUE ============ -->
 <section class="catalogue" id="catalogue">
   <div class="wrap">
@@ -524,7 +557,7 @@ creature: {
 <section class="skills" id="skills">
   <div class="wrap">
     <div class="eyebrow"><img src="{{H}}brand/icons/guide.webp" alt="">[[Under the agent's hood||Sous le capot de l'agent]]</div>
-    <h2>[[16 skills: the agent's know-how||16 skills : le savoir-faire de l'agent]]</h2>
+    <h2>[[20 skills: the agent's know-how||20 skills : le savoir-faire de l'agent]]</h2>
     <p class="lead">[[Skills are recipes the Claude Code agent follows for each kind of request. You almost never call them yourself: describe what you want and the agent chains the right ones.||Les skills sont des recettes que l'agent Claude Code suit pour chaque type de demande. On ne les appelle presque jamais soi-même : on décrit ce qu'on veut et l'agent enchaîne les bonnes.]]</p>
 
     <div class="sk">
@@ -563,6 +596,14 @@ creature: {
           <dt>sync-engine</dt><dd>[[Spread an engine improvement to the template and every game.||Diffuser une amélioration du moteur vers le modèle et tous les jeux.]]</dd>
         </dl>
       </div>
+      <div class="skg">
+        <h3>[[With Ludea||Avec Ludea]]</h3>
+        <dl>
+          <dt>report-upstream</dt><dd>[[Sends engine bugs and improvements back to Ludea, automatically.||Remonte à Ludea les bugs et améliorations du moteur, automatiquement.]]</dd>
+          <dt>ludea-feedback</dt><dd>[[Your ideas for the engine, as a clear request.||Vos idées pour le moteur, en une demande claire.]]</dd>
+          <dt>ludea-publish</dt><dd>[[Checks your game and asks for it to join the catalogue.||Vérifie votre jeu et demande son entrée au catalogue.]]</dd>
+        </dl>
+      </div>
     </div>
   </div>
 </section>
@@ -586,7 +627,7 @@ creature: {
   <div class="wrap">
     <img class="lu" src="{{H}}brand/guide-idea.webp" alt="">
     <h2>[[Want to make your own?||Envie de créer le vôtre ?]]</h2>
-    <p>[[Start from the template, launch an agent, answer a few questions.||Partez du modèle, lancez un agent, répondez à quelques questions.]]</p>
+    <p>[[Start from the template, launch an agent, answer a few questions — then share it on ludea.ai.||Partez du modèle, lancez un agent, répondez à quelques questions — puis partagez-le sur ludea.ai.]]</p>
     <div class="cta">
       <a class="btn" href="https://github.com/ludea-ai/game-engine"><img src="{{H}}brand/icons/seed.webp" alt="">[[Use the template||Utiliser le modèle]]</a>
       <a class="btn ghost" href="https://ludea.ai/nebula/"><img src="{{H}}brand/icons/play.webp" alt="">[[Try the showcase||Essayer la vitrine]]</a>
