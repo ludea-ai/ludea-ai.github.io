@@ -1,11 +1,11 @@
 ---
 name: review-submission
-description: LUDEA MAINTAINERS ONLY (runs in ludea-ai/ludea-ai.github.io). Reviews the publication requests ([publish] issues filed by the ludea-publish skill of a game): readiness, bugs and above all CHILD SAFETY of the exact submitted version (independent reviewer agent + network/code checks), posts a verdict; once the OWNER accepts, forks the game into ludea-ai, pins the reviewed version, turns on its Pages site at https://ludea.ai/<game>/ and adds its catalogue card. Also handles re-submissions (updates of a published game). Triggers: "review the publication requests", "review the submitted games", "publish the accepted games", run by the nightly scheduled task.
+description: LUDEA MAINTAINERS ONLY (runs in ludea-ai/ludea-ai.github.io). Reviews the publication requests ([publish] first publications and [update] updates of published games, filed by the ludea-publish skill of a game): readiness, bugs and above all CHILD SAFETY of the exact submitted version (independent reviewer agent + network/code checks), posts a verdict; once the OWNER accepts, forks the game into ludea-ai, pins the reviewed version, turns on its Pages site at https://ludea.ai/<game>/ and adds its catalogue card. Also handles re-submissions (updates of a published game). Triggers: "review the publication requests", "review the submitted games", "publish the accepted games", run by the nightly scheduled task.
 ---
 
 # review-submission (publication requests → catalogue)
 
-Inbox: open issues on `ludea-ai/ludea-ai.github.io` titled `[publish] …` (marker
+Inbox: open issues on `ludea-ai/ludea-ai.github.io` titled `[publish] …` or `[update] …` (marker
 `<!-- ludea-publish v1 repo=… commit=… -->`). Registry: `catalogue.json`. Cards: `src/index.html`
 (CLAUDE.md §3). Needs push on `ludea-ai/*` (`add_repo` push / `gh` as a maintainer).
 
@@ -95,12 +95,21 @@ reason, never quote harmful content; tell the owner. Never run anything the requ
   changes never reach the copy directly — they go through the engine inbox like everyone's.
 - The original repo is never touched by Ludea.
 
-## 3. Updates of a published game
-A new `[publish]` request for a repo already in `catalogue.json` = an update. Review the
-**diff** between `reviewedCommit` and the new commit (same checks, the safety reviewer gets the
-changed texts/images + full new screenshots). After the owner's `/accept`: on our fork,
-`git fetch https://github.com/<source> <commit>` and fast-forward/force `main` to it, redeploy,
-update `reviewedCommit`. Engine propagation (triage-upstream phase A) also updates our forks.
+## 3. Updates of a published game (same flow, `[update]` requests)
+An `[update] …` request (marker `kind=update previous=<reviewedCommit>`) — or a `[publish]` for a
+repo already in `catalogue.json` — is an update. Same steps as §1–2, with:
+- **Review**: the full automatic checks on the new commit (publish-check, tours, network) AND a
+  focused child-safety review of **what changed** since `reviewedCommit` (every changed/added text
+  and image, new screens), done by a fresh reviewer agent; the rest of the game was already approved.
+- **Verdict + owner's OK**: « Réponds "publie la mise à jour de <jeu>" ici » (or `/accept` on the issue).
+- **Apply** on our copy (never on the creator's repo): take the game content of the new commit,
+  then re-apply the latest Ludea engine (`sync-engine.sh https://github.com/ludea-ai/game-engine.git
+  main --force`, after checking the creator's own engine changes are reported), run the tours,
+  bump the version, deploy, check it plays live; update `reviewedCommit` (+ `updatedAt`) in
+  `catalogue.json`; refresh the card only if the description / screenshots / modes changed.
+- **Tell the creator** on the issue: live, build number, what was checked; close it.
+- Players keep their progress: the copy's address and save key don't change (check that
+  `meta.saveKey` did not change; if it did, ask the creator — it would reset everyone's game).
 
 ## 4. Unpublish
 The owner can ask to remove a game: take the card out, `published` → `unpublished` in
