@@ -291,6 +291,6 @@ footer .made img { width: 26px; height: 26px; }
 .doc-cards section { margin: 0 !important; padding: 22px !important; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 22px; box-shadow: var(--shadow); }
 .legal-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 20px; margin: 14px 0 6px; font-size: 14px; }
 .legal-links a { color: inherit; opacity: .85; }
-.legal-links a[aria-current="page"] { opacity: 1; color: var(--ink); font-weight: 700; text-decoration: none; padding: 1px 10px; border-radius: 999px; background: var(--surface); box-shadow: inset 0 0 0 1.5px var(--line2); }
+.legal-links a[aria-current="page"] { opacity: 1; color: var(--ink); font-weight: 700; text-decoration: none; }
 .doc-foot { padding: 26px 0 34px; text-align: center; border-top: 1px solid var(--line); color: var(--muted); }
 .doc-main section p + p { margin-top: 10px; }
