@@ -31,6 +31,8 @@ for (const P of PAGES) {
     html = html.replace(/\{\{LANG\}\}/g, lang).replace(/\{\{H\}\}/g, H).replace(/\{\{P\}\}/g, P.slug)
       .replace(/\{\{HOME\}\}/g, H + (lang === "fr" ? "fr/" : ""))
       .replace(/\{\{ON_EN\}\}/g, lang === "en" ? "on" : "").replace(/\{\{ON_FR\}\}/g, lang === "fr" ? "on" : "");
+    // the footer links show the page you are on
+    if (P.slug) html = html.replace(/<p class="legal-links">[\s\S]*?<\/p>/, (p) => p.replace(`<a href="${H + (lang === "fr" ? "fr/" : "") + P.slug}">`, (a) => a.replace(">", ' aria-current="page">')));
     if (/\{\{[>\w]/.test(html)) throw new Error(`unknown {{placeholder}} left in ${out}`);
     const f = path.join(dir, out);
     fs.mkdirSync(path.dirname(f), { recursive: true });
