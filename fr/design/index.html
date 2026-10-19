@@ -1,0 +1,152 @@
+<!doctype html>
+<!-- Generated from design.cjs by build.cjs — do not edit. -->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design system de Ludea</title>
+<meta name="description" content="Logo, couleurs, typographie, composants, icônes et Lu, le guide, pour Ludea.">
+<link rel="alternate" hreflang="en" href="https://ludea.ai/design/">
+<link rel="alternate" hreflang="fr" href="https://ludea.ai/fr/design/">
+<link rel="icon" href="../../brand/favicon.png">
+<link rel="stylesheet" href="../../landing.css">
+<style>
+.ds section { padding: 60px 0; border-top: 1px solid var(--line); }
+.ds h2 { font-size: 34px; margin-bottom: 8px; }
+.ds .note { color: var(--muted); max-width: 720px; margin-bottom: 26px; }
+.row { display: flex; flex-wrap: wrap; gap: 18px; align-items: center; }
+.tile { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 26px; box-shadow: var(--shadow); }
+.tile.dark { background: var(--night); }
+.lock { display: flex; align-items: center; gap: 12px; font-family: var(--display); font-weight: 800; letter-spacing: -.03em; color: var(--ink); }
+.lock img { width: 64px; } .lock span { font-size: 56px; line-height: 1; }
+.tile.dark .lock { color: #fff; }
+.apps img { width: 96px; border-radius: 22px; box-shadow: var(--shadow); }
+.sw { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; }
+.sw div { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); }
+.sw i { display: block; height: 70px; border-bottom: 1px solid var(--line); }
+.sw p { padding: 8px 12px 10px; font-size: 13px; color: var(--muted); } .sw b { display: block; color: var(--ink); font-size: 14px; }
+.type .d1 { font-family: var(--display); font-weight: 800; font-size: clamp(40px, 7vw, 64px); letter-spacing: -.03em; line-height: 1; }
+.type .d2 { font-family: var(--display); font-weight: 800; font-size: 40px; letter-spacing: -.02em; line-height: 1.1; }
+.type .d3 { font-family: var(--display); font-weight: 800; font-size: 22px; }
+.type p { color: var(--muted); }
+.icons { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 12px; }
+.icons figure { margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 12px 8px 8px; text-align: center; }
+.icons img { width: 56px; height: 56px; margin: 0 auto 6px; }
+.icons figcaption { font: 12px var(--mono); color: var(--muted); }
+.lus { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.lus figure { margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 18px; text-align: center; box-shadow: var(--shadow); }
+.lus img { width: 200px; margin: 0 auto; } .lus figcaption { color: var(--muted); font-size: 14px; margin-top: 6px; }
+.rules { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; } .rules ul { margin: 0; padding-left: 18px; color: var(--muted); display: grid; gap: 6px; }
+.rules h3 { margin-bottom: 10px; }
+@media (max-width: 760px) { .lus, .rules { grid-template-columns: 1fr; } .lock span { font-size: 40px; } .lock img { width: 46px; } }
+.ds-toc { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+.ds-toc a { padding: 6px 14px; border-radius: 999px; background: var(--surface); box-shadow: inset 0 0 0 1.5px var(--line2); color: var(--ink); font-weight: 600; font-size: 14px; text-decoration: none; }
+.ds-toc a:hover { box-shadow: inset 0 0 0 1.5px var(--ink); }
+</style>
+</head>
+<body class="ds">
+<nav>
+  <div class="wrap">
+    <a class="brand" href="../../fr/#top"><img src="../../brand/mark.webp" alt="">ludea</a>
+    <div class="links">
+      <a href="../../fr/#principle">Le principe</a>
+      <a href="../../fr/#use">Comment l'utiliser</a>
+      <a href="../../fr/#catalogue">Les jeux</a>
+      <a href="../../fr/#install">Installer</a>
+      <a href="../../fr/#modes">Modes de jeu</a>
+      <a href="../../fr/#features">Fonctionnalités</a>
+      <a href="../../fr/#skills">Skills</a>
+      <a class="m-only" href="https://github.com/ludea-ai"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>GitHub</a>
+    </div>
+    <a class="gh" href="https://github.com/ludea-ai" title="Tout le code sur GitHub"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span>GitHub</span></a>
+    <div class="lang"><a href="../../design/" class="" hreflang="en" lang="en">EN</a><a href="../../fr/design/" class="on" hreflang="fr" lang="fr">FR</a></div>
+    <button class="burger" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<header class="hero" style="padding:70px 0 50px"><div class="wrap" style="display:block">
+  <div class="eyebrow"><img src="../../brand/icons/palette.webp" alt="">Design system</div>
+  <h1>Ludea, <em>dans les règles.</em></h1>
+  <p class="lead">Ce qui fait la marque Ludea — pour la page d'accueil, la documentation et tout ce qui parle au nom du moteur. Les jeux gardent leurs propres univers ; ceci est l'allure du moteur qui les fabrique. Art : <code>tools/art/brand.cjs</code> · variables : <code>landing.css</code>.</p>
+  <div class="ds-toc"><a href="#logo">Logo</a><a href="#colour">Couleurs</a><a href="#type">Typographie</a><a href="#components">Composants</a><a href="#icons">Icônes</a><a href="#lu">Lu</a></div>
+</div></header>
+
+<section id="logo"><div class="wrap">
+  <h2>Logo</h2>
+  <p class="note">Le symbole est une bulle de dialogue (vous décrivez un jeu) qui contient un bouton lecture (il devient jouable) et une étincelle (l'idée). Le nom s'écrit <b>ludea</b>, en minuscules, Bricolage Grotesque 800. Gardez autour un espace libre d'une demi-largeur du symbole ; ne jamais le recolorer, l'étirer, le détourer ni lui ajouter d'effet.</p>
+  <div class="row">
+    <div class="tile"><div class="lock"><img src="../../brand/mark.webp" alt=""><span>ludea</span></div></div>
+    <div class="tile dark"><div class="lock"><img src="../../brand/mark.webp" alt=""><span>ludea</span></div></div>
+    <div class="tile apps row"><img src="../../brand/icon-512.png" alt="Icône d'application"><img src="../../brand/apple-touch-icon.png" alt="" style="width:64px;border-radius:15px"><img src="../../brand/favicon.png" alt="" style="width:32px;border-radius:0;box-shadow:none"></div>
+  </div>
+</div></section>
+
+<section id="colour"><div class="wrap">
+  <h2>Couleurs</h2>
+  <p class="note">Papier chaud, encre profonde et un dégradé de marque mandarine → corail. Les couleurs d'accent sont utilisées avec parcimonie, une par élément. Des bandeaux sombres donnent le rythme (code, skills). Le texte est encre ou atténué sur fond clair, blanc ou #c9c8e6 sur fond encre.</p>
+  <div class="sw"><div><i style="background:#fffaf3"></i><p><b>--paper</b>#fffaf3 · Fond de page</p></div><div><i style="background:#f6efe5"></i><p><b>--sand</b>#f6efe5 · Sections alternées</p></div><div><i style="background:#ffffff"></i><p><b>--surface</b>#ffffff · Cartes</p></div><div><i style="background:#1d1b3a"></i><p><b>--ink</b>#1d1b3a · Texte, bandeaux sombres, contours</p></div><div><i style="background:#5d5b7a"></i><p><b>--muted</b>#5d5b7a · Texte secondaire</p></div><div><i style="background:#ff5b4f"></i><p><b>--coral</b>#ff5b4f · Marque, actions principales</p></div><div><i style="background:#ff8a3d"></i><p><b>--tangerine</b>#ff8a3d · Début du dégradé de marque</p></div><div><i style="background:#ffbe2e"></i><p><b>--sun</b>#ffbe2e · Étincelle, mises en avant</p></div><div><i style="background:#19c39a"></i><p><b>--mint</b>#19c39a · Réussite, nature</p></div><div><i style="background:#3c8dff"></i><p><b>--sky</b>#3c8dff · Info, technique</p></div><div><i style="background:#8a6cff"></i><p><b>--lilac</b>#8a6cff · Magie, aide</p></div><div><i style="background:#ff7aa8"></i><p><b>--rose</b>#ff7aa8 · Soin, chaleur</p></div><div><i style="background:var(--brand)"></i><p><b>--brand</b>mandarine → corail · logo, boutons principaux, mise en valeur</p></div></div>
+</div></section>
+
+<section id="type" class="type"><div class="wrap">
+  <h2>Typographie</h2>
+  <p class="note">Bricolage Grotesque (600–800) pour les grands titres et les intertitres, avec un approche serré ; DM Sans (400–700) pour le texte ; la police à chasse fixe du système pour le code et les noms de skills. Les deux polices sont hébergées par le site (licence SIL Open Font License).</p>
+  <div class="tile">
+    <div class="d1">Vous le décrivez.</div>
+    <div class="d2" style="margin-top:18px">Quatre jeux, un moteur</div>
+    <div class="d3" style="margin-top:14px">Partez du modèle</div>
+    <p style="margin-top:12px;font-size:19px">Chapeau — DM Sans 19/1,6, atténué. Texte — DM Sans 17/1,6.</p>
+    <p style="margin-top:6px"><code>new-game · feedback-session</code> — chasse fixe, corail.</p>
+  </div>
+</div></section>
+
+<section id="components"><div class="wrap">
+  <h2>Composants</h2>
+  <p class="note">Arrondi, tactile, accueillant : boutons en pilule avec un rebord « enfoncé », cartes blanches à ombre douce, arrondi de 22 px (12 petit, 30 grand). Les boutons font 44 à 50 px de haut, avec des icônes qui les remplissent.</p>
+  <div class="tile">
+    <div class="row"><a class="btn" href="#components"><img src="../../brand/icons/play.webp" alt="">Principal</a><a class="btn ghost" href="#components"><img src="../../brand/icons/help.webp" alt="">Secondaire</a><a class="btn small" href="#components"><img src="../../brand/icons/play.webp" alt="">Petit</a><a class="btn small ghost" href="#components">Petit contour</a></div>
+    <div class="row" style="margin-top:20px"><span class="tag" style="background:var(--sun);color:var(--ink)">6–7 ans</span><span class="tag">Français</span><span class="tag">Arcade</span><span class="lang"><a class="on" href="#components">EN</a><a href="#components">FR</a></span></div>
+    <div class="chat" style="margin-top:22px">
+      <div class="bubbles"><div class="b u">Ajoute une boutique pour acheter des décorations</div><div class="b a">C'est en ligne !<small>Détail complémentaire, atténué.</small></div></div>
+      <div class="step"><img class="ico" src="../../brand/icons/seed.webp" alt=""><h3>Carte d'étape</h3><p>Numérotée avec une pastille de marque.</p><div class="say" data-who="Vous : ">/new-game</div></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="icons"><div class="wrap">
+  <h2>Icônes</h2>
+  <p class="note">Illustrées, jamais d'emoji : contour épais couleur encre, dégradé bicolore, reflet brillant — la même famille que l'interface des jeux, dans la palette Ludea. Dessinées dans un carré de 128, exportées en 256 px (WebP).</p>
+  <div class="icons"><figure><img src="../../brand/icons/star.webp" alt=""><figcaption>star</figcaption></figure><figure><img src="../../brand/icons/heart.webp" alt=""><figcaption>heart</figcaption></figure><figure><img src="../../brand/icons/help.webp" alt=""><figcaption>help</figcaption></figure><figure><img src="../../brand/icons/avatar.webp" alt=""><figcaption>avatar</figcaption></figure><figure><img src="../../brand/icons/goals.webp" alt=""><figcaption>goals</figcaption></figure><figure><img src="../../brand/icons/play.webp" alt=""><figcaption>play</figcaption></figure><figure><img src="../../brand/icons/check.webp" alt=""><figcaption>check</figcaption></figure><figure><img src="../../brand/icons/gift.webp" alt=""><figcaption>gift</figcaption></figure><figure><img src="../../brand/icons/hand.webp" alt=""><figcaption>hand</figcaption></figure><figure><img src="../../brand/icons/sparkle.webp" alt=""><figcaption>sparkle</figcaption></figure><figure><img src="../../brand/icons/moon.webp" alt=""><figcaption>moon</figcaption></figure><figure><img src="../../brand/icons/refresh.webp" alt=""><figcaption>refresh</figcaption></figure><figure><img src="../../brand/icons/arrow.webp" alt=""><figcaption>arrow</figcaption></figure><figure><img src="../../brand/icons/home.webp" alt=""><figcaption>home</figcaption></figure><figure><img src="../../brand/icons/lock.webp" alt=""><figcaption>lock</figcaption></figure><figure><img src="../../brand/icons/palette.webp" alt=""><figcaption>palette</figcaption></figure><figure><img src="../../brand/icons/sound.webp" alt=""><figcaption>sound</figcaption></figure><figure><img src="../../brand/icons/smile.webp" alt=""><figcaption>smile</figcaption></figure><figure><img src="../../brand/icons/trophy.webp" alt=""><figcaption>trophy</figcaption></figure><figure><img src="../../brand/icons/pad.webp" alt=""><figcaption>pad</figcaption></figure><figure><img src="../../brand/icons/shop.webp" alt=""><figcaption>shop</figcaption></figure><figure><img src="../../brand/icons/speed.webp" alt=""><figcaption>speed</figcaption></figure><figure><img src="../../brand/icons/ride.webp" alt=""><figcaption>ride</figcaption></figure><figure><img src="../../brand/icons/guide.webp" alt=""><figcaption>guide</figcaption></figure><figure><img src="../../brand/icons/flag.webp" alt=""><figcaption>flag</figcaption></figure><figure><img src="../../brand/icons/seed.webp" alt=""><figcaption>seed</figcaption></figure><figure><img src="../../brand/icons/crate.webp" alt=""><figcaption>crate</figcaption></figure><figure><img src="../../brand/icons/polish.webp" alt=""><figcaption>polish</figcaption></figure><figure><img src="../../brand/icons/creature.webp" alt=""><figcaption>creature</figcaption></figure><figure><img src="../../brand/icons/timer.webp" alt=""><figcaption>timer</figcaption></figure><figure><img src="../../brand/icons/portal.webp" alt=""><figcaption>portal</figcaption></figure><figure><img src="../../brand/icons/siren.webp" alt=""><figcaption>siren</figcaption></figure><figure><img src="../../brand/icons/flagFr.webp" alt=""><figcaption>flagFr</figcaption></figure><figure><img src="../../brand/icons/flagGb.webp" alt=""><figcaption>flagGb</figcaption></figure></div>
+</div></section>
+
+<section id="lu"><div class="wrap">
+  <h2>Lu, le guide</h2>
+  <p class="note">Lu, c'est le logo avec un visage : la bulle qui écoute votre idée. Lu explique les choses sur le site — une fois par écran au plus, jamais dans les jeux. Dessiné par la même famille de fonctions que le symbole (<code>guide()</code> dans brand.cjs), pour que les deux ne divergent jamais.</p>
+  <div class="lus">
+    <figure><img src="../../brand/guide-hello.webp" alt=""><figcaption><b>hello</b> — accueille (haut de page)</figcaption></figure>
+    <figure><img src="../../brand/guide-point.webp" alt=""><figcaption><b>point</b> — montre quelque chose (installation)</figcaption></figure>
+    <figure><img src="../../brand/guide-idea.webp" alt=""><figcaption><b>idea</b> — invite à créer (pied de page)</figcaption></figure>
+  </div>
+</div></section>
+
+<section><div class="wrap rules">
+  <div class="tile"><h3>Ton</h3><ul><li>Des mots simples, sans jargon : « décrire », « jouer », « dire ce qu'on en pense ».</li><li>Phrases courtes, voix active, chaleureux sans être enfantin.</li><li>Anglais par défaut, le français en traduction complète — jamais de mélange.</li><li>Montrer plutôt qu'affirmer : de vraies captures, des limites dites honnêtement.</li></ul></div>
+  <div class="tile"><h3>À éviter</h3><ul><li>Aucun emoji, nulle part — utilisez le jeu d'icônes.</li><li>Ne pas utiliser l'art d'un jeu (Nebula, Dr Smile…) comme image de Ludea.</li><li>Ne pas mettre Lu dans un jeu, ni plus d'une fois par écran.</li><li>Ne pas recolorer le symbole ni le dégradé.</li></ul></div>
+</div></section>
+<footer class="doc-foot">
+  <div class="wrap">
+    <p class="legal-links"><a href="../../fr/contact/">Contact</a><a href="../../fr/legal/">Mentions légales</a><a href="../../fr/privacy/">Confidentialité</a><a href="../../fr/design/" aria-current="page">Design system</a><a href="https://github.com/ludea-ai">GitHub</a></p>
+    <small>© 2026 Ludea</small>
+  </div>
+</footer>
+<script>
+(function () {
+  var nav = document.querySelector("nav"), b = nav && nav.querySelector(".burger");
+  if (!b) return;
+  function set(open) { nav.classList.toggle("open", open); b.setAttribute("aria-expanded", open ? "true" : "false"); }
+  b.addEventListener("click", function () { set(!nav.classList.contains("open")); });
+  nav.querySelectorAll(".links a").forEach(function (a) { a.addEventListener("click", function () { set(false); }); });
+  document.addEventListener("click", function (e) { if (!nav.contains(e.target)) set(false); });
+  window.addEventListener("resize", function () { if (window.innerWidth > 1100) set(false); });
+})();
+</script>
+</body></html>

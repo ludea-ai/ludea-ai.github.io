@@ -16,16 +16,17 @@ const PAGES = [
   { file: "contact.html", slug: "contact/" },
   { file: "legal.html", slug: "legal/" },
   { file: "privacy.html", slug: "privacy/" },
+  { gen: "design.cjs", slug: "design/" }, // generated source (icon grid, swatches from the brand art)
 ];
 const LANGS = ["en", "fr"];
 for (const P of PAGES) {
-  let src = fs.readFileSync(path.join(dir, "src", P.file), "utf8");
+  let src = P.gen ? require("./" + P.gen)() : fs.readFileSync(path.join(dir, "src", P.file), "utf8");
   for (let i = 0; i < 5 && /\{\{>/.test(src); i++) // partials may include partials
     src = src.replace(/\{\{>\s*([\w-]+)\s*\}\}/g, (_, n) => fs.readFileSync(path.join(dir, "src/partials", n + ".html"), "utf8").trimEnd());
   for (const lang of LANGS) {
     const out = (lang === "fr" ? "fr/" : "") + P.slug + "index.html";
     const H = "../".repeat(out.split("/").length - 1);
-    let html = src.replace(/<!--\s*SOURCE[\s\S]*?-->\n?/, `<!-- Generated from src/${P.file} by build.cjs — do not edit. -->\n`);
+    let html = src.replace(/<!--\s*SOURCE[\s\S]*?-->\n?/, `<!-- Generated from ${P.gen || "src/" + P.file} by build.cjs — do not edit. -->\n`);
     html = html.replace(/\[\[([\s\S]*?)\|\|([\s\S]*?)\]\]/g, (_, en, fr) => (lang === "en" ? en : fr));
     if (/\[\[|\]\]|\|\|/.test(html.replace(/<pre>[\s\S]*?<\/pre>/g, ""))) throw new Error(`unbalanced [[…||…]] marker left in ${out}`);
     html = html.replace(/\{\{LANG\}\}/g, lang).replace(/\{\{H\}\}/g, H).replace(/\{\{P\}\}/g, P.slug)
@@ -40,4 +41,3 @@ for (const P of PAGES) {
     console.log("✓", path.relative(process.cwd(), f));
   }
 }
-require("./design.cjs");
