@@ -29,7 +29,7 @@ module.exports = () => `<!doctype html>
 <link rel="stylesheet" href="{{H}}landing.css">
 <style>
 .ds section { padding: 60px 0; border-top: 1px solid var(--line); }
-.ds h2 { font-size: 34px; margin-bottom: 8px; }
+.ds section h2 { font-size: 34px; margin-bottom: 8px; }
 .ds .note { color: var(--muted); max-width: 720px; margin-bottom: 26px; }
 .row { display: flex; flex-wrap: wrap; gap: 18px; align-items: center; }
 .tile { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 26px; box-shadow: var(--shadow); }
@@ -132,7 +132,7 @@ module.exports = () => `<!doctype html>
   <div class="tile"><h3>[[Voice||Ton]]</h3><ul>[[<li>Plain words, no jargon: “describe”, “play”, “say what you think”.</li><li>Short sentences, active voice, warm but not childish.</li><li>English by default, French as a full translation — never mixed.</li><li>Show, don't claim: real screenshots, honest limits.</li>||<li>Des mots simples, sans jargon : « décrire », « jouer », « dire ce qu'on en pense ».</li><li>Phrases courtes, voix active, chaleureux sans être enfantin.</li><li>Anglais par défaut, le français en traduction complète — jamais de mélange.</li><li>Montrer plutôt qu'affirmer : de vraies captures, des limites dites honnêtement.</li>]]</ul></div>
   <div class="tile"><h3>[[Don't||À éviter]]</h3><ul>[[<li>No emoji anywhere — use the icon set.</li><li>Don't use a game's art (Nebula, Dr Smile…) as Ludea branding.</li><li>Don't put Lu inside a game, or more than once per screen.</li><li>Don't recolour the mark or the gradient.</li>||<li>Aucun emoji, nulle part — utilisez le jeu d'icônes.</li><li>Ne pas utiliser l'art d'un jeu (Nebula, Dr Smile…) comme image de Ludea.</li><li>Ne pas mettre Lu dans un jeu, ni plus d'une fois par écran.</li><li>Ne pas recolorer le symbole ni le dégradé.</li>]]</ul></div>
 </div></section>
-{{> doc-footer}}
+{{> site-footer}}
 {{> nav-script}}
 </body></html>
 `;
