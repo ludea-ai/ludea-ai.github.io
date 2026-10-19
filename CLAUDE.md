@@ -46,9 +46,9 @@ then `node build.cjs`. Every game in the catalogue is available in English and F
 
 ### Publication requests (games made by others)
 A creator asks to join the catalogue with `/publish` in their game → a `[publish] …` issue
-here. The skill **review-submission** (`.claude/skills/review-submission/`) reviews the exact
-submitted commit — readiness, bugs and above all **child safety** (independent reviewer agent,
-`references/child-safety.md`; no request may leave the game) — and posts a verdict. **The owner
+here. The catalogue agent reviews the exact submitted commit — readiness, bugs and above all
+**child safety** (independent reviewer agent; no request may leave the game) — following its procedure
+in **`ludea-ai/agents`** (`procedures/catalogue/review-submission.md` + `child-safety.md`) — and posts a verdict. **The owner
 accepts** (`/accept` comment); then the game is **forked into `ludea-ai`** at the reviewed commit,
 served at `https://ludea.ai/<slug>/`, and its card is added. `catalogue.json` = the registry of
 published games (repo served, original source, reviewed commit); the engine propagation
@@ -72,11 +72,11 @@ any asset (listen to `response` events), then push to `main` and confirm the dep
 - `ludea-ai.github.io` — this site (the org site repo). Ludea's games: `dr-smile`, `gta7`, `my-little-stable` (https://ludea.ai/<repo>/).
   Poulpy now lives in its creator's repo `jlrigau/poulpy` (the first external creator; publication requested 2026-10-18, #1).
 - Ludea loop: games report engine bugs/improvements and creators' ideas as issues on `ludea-ai/game-engine`
-  (skills report-upstream, idea); Nebula's triage-upstream qualifies them, opens one PR the owner
-  approves, then propagates. Publication requests land here (above). Two separate nightly agents
-  (scheduled tasks): « agent moteur » 03:55 Paris (engine inbox, triage-upstream) and « agent catalogue »
-  05:55 (publication requests, review-submission). Each sends the owner its own French summary and
-  acts only after the owner's OK (« OK » / « publie <jeu> »).
+  (skills report-upstream, idea); the engine agent qualifies them, opens one PR on `game-engine` the
+  owner approves, then propagates. Publication requests land here (above). The agents — « agent
+  moteur » 03:55 Paris, « agent catalogue » 05:55, « surveillance » 07:10 — are defined, documented and
+  (re)installed from **`ludea-ai/agents`** (`/install-agents`, runbook `DEPANNAGE.md`). Each sends the
+  owner its own French summary and acts only after the owner's OK (« OK » / « publie <jeu> »).
 - Domain state (2026-10-11): org site repo `ludea-ai.github.io` carries the custom domain ludea.ai
   (set there ONLY, never per repo); DNS: 4 GitHub A records + `www` CNAME → ludea-ai.github.io;
   HTTPS certificate issued — every repo is live at https://ludea.ai/<repo>/ (github.io redirects
