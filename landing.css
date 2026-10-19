@@ -292,5 +292,4 @@ footer .made img { width: 26px; height: 26px; }
 .legal-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 20px; margin: 14px 0 6px; font-size: 14px; }
 .legal-links a { color: inherit; opacity: .85; }
 .legal-links a[aria-current="page"] { opacity: 1; color: var(--ink); font-weight: 700; text-decoration: none; }
-.doc-foot { padding: 26px 0 34px; text-align: center; border-top: 1px solid var(--line); color: var(--muted); }
 .doc-main section p + p { margin-top: 10px; }
